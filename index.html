@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Serenitee Evolution LLC — Recording Studio</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<link rel="icon" type="image/png" href="assets/logo.png">
+<meta name="description" content="Serenitee Evolution — youth-centered recording studio in Oshkosh, WI.">
+</head>
+<body>
+<header class="site-header">
+  <nav class="nav container">
+    <a class="brand" href="#home"><img src="assets/logo.png" alt="logo"/><span>Serenitee Evolution LLC</span></a>
+    <button class="nav-toggle" aria-label="Open Menu">☰</button>
+    <ul class="nav-links">
+      <li><a href="#mission">Mission</a></li>
+      <li><a href="#pricing">Pricing</a></li>
+      <li><a href="#memberships">Memberships</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a class="button button-outline" href="#contact">Book</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main id="home">
+  <section class="hero container">
+    <div class="hero-text">
+      <h1><span class="gold">Serenitee Evolution</span></h1>
+      <p class="tagline">Est. 2025 • Oshkosh, WI</p>
+      <p class="mission-quote">“To empower youth through creative expression, offering a safe and inspiring space to develop musical talents, life skills, and self-confidence.”</p>
+      <div class="cta-row">
+        <a class="button" href="#pricing">See Pricing</a>
+        <a class="button button-outline" href="#contact">Book a Session</a>
+      </div>
+    </div>
+    <div class="hero-art"><img src="assets/logo.png" alt="logo hero" class="logo-hero"></div>
+  </section>
+
+  <section id="mission" class="section container">
+    <h2 class="section-title">Our Mission</h2>
+    <p>We are a youth-centered recording studio and creative hub. We provide professional audio production, mentorship, and skills-building in a safe, high-vibe environment.</p>
+  </section>
+
+  <section id="pricing" class="section container">
+    <h2 class="section-title">Studio Rates</h2>
+    <div class="grid three">
+      <div class="card price"><h3>Hourly</h3><ul class="price-list"><li><strong>Basic (DIY):</strong> $25–$35/hr</li><li><strong>Engineer-Assisted:</strong> $40–$70/hr</li><li><strong>Premium Session:</strong> $80–$120/hr</li></ul></div>
+      <div class="card price"><h3>Day Rates</h3><ul class="price-list"><li><strong>Half-Day (4–5 hrs):</strong> $150–$250</li><li><strong>Full-Day (8–10 hrs):</strong> $300–$500</li></ul></div>
+      <div class="card price"><h3>Project Packages</h3><ul class="price-list"><li><strong>Demo:</strong> $100–$150</li><li><strong>Single:</strong> $250–$400</li><li><strong>EP:</strong> $900–$1,500</li></ul></div>
+    </div>
+  </section>
+
+  <section id="memberships" class="section container">
+    <h2 class="section-title">Memberships</h2>
+    <div class="grid four memberships">
+      <div class="card tier"><h3>Starter</h3><p class="price-big">$100<span>/mo</span></p><ul><li>5 hrs studio time</li><li>10% off extra hours</li></ul></div>
+      <div class="card tier"><h3>Serious Artist</h3><p class="price-big">$250<span>/mo</span></p><ul><li>12 hrs studio time</li><li>Priority scheduling</li></ul></div>
+      <div class="card tier popular"><h3>Pro</h3><p class="price-big">$500<span>/mo</span></p><ul><li>25 hrs studio time</li><li>Engineer support</li></ul></div>
+      <div class="card tier"><h3>Label/Agency</h3><p class="price-big">Custom</p><ul><li>$800–$1,200 typical</li></ul></div>
+    </div>
+  </section>
+
+  <section id="about" class="section container">
+    <h2 class="section-title">About the Studio</h2>
+    <div class="grid two about-grid">
+      <div class="card"><h3>Core Services</h3><ul class="ul-check"><li>Recording, mixing, and mastering</li><li>Podcast production</li><li>Workshops and youth mentorship</li></ul></div>
+      <div class="card"><h3>NAICS</h3><p><strong>512240 — Sound Recording Studios</strong></p></div>
+    </div>
+  </section>
+
+  <section id="contact" class="section container">
+    <h2 class="section-title">Book a Session</h2>
+    <p>Select a date, choose an hourly slot (9 AM - 9 PM), then submit your request. After sending the request, please complete the $35 deposit via PayPal to secure your slot.</p>
+    <div class="booking-wrap grid two">
+      <div class="card calendar-card">
+        <div class="calendar-header"><button id="prevMonth" class="button small">◀</button><div id="monthLabel"></div><button id="nextMonth" class="button small">▶</button></div>
+        <div id="calendar"></div>
+        <p class="fine-print">Bookings open starting Jan 1, 2026. Demo booked slots exist in 2025 for preview.</p>
+      </div>
+
+      <div class="card form-card">
+        <form id="bookingForm" class="contact-form">
+          <label>Full Name<input type="text" id="bf-name" required></label>
+          <label>Email<input type="email" id="bf-email" required></label>
+          <label>Service<select id="bf-service" required><option value="">Choose…</option><option>Hourly</option><option>Half-Day</option></select></label>
+          <label>Selected Date<input type="text" id="bf-date" readonly required placeholder="Pick a date"></label>
+          <label>Selected Time Slot<select id="bf-time" required><option value="">Pick a time slot</option></select></label>
+          <label>Message<textarea id="bf-message" rows="4" placeholder="Tell us about your project…"></textarea></label>
+          <div class="form-actions" style="display:flex;gap:.6rem;align-items:center">
+            <button class="button" type="submit" id="submitBooking">Send Booking Request</button>
+            <a id="paypalButton" class="button button-outline" target="_blank" rel="noopener" href="https://www.paypal.com/ncp/payment/PP8HNMKMY6M4N">Secure Deposit — $35</a>
+          </div>
+          <p id="formNote" class="fine-print">You must complete the deposit to secure your requested time.</p>
+        </form>
+        <div id="bookingStatus" style="margin-top:1rem"></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div><img class="footer-logo" src="assets/logo.png" alt="logo"/><p>© <span id="year"></span> Serenitee Evolution LLC • Oshkosh, WI</p></div>
+    <div><ul class="footer-links"><li><a href="#pricing">Rates</a></li><li><a href="#memberships">Memberships</a></li></ul></div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
